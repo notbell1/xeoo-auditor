@@ -12,8 +12,7 @@
 
 [![Privacy First](https://img.shields.io/badge/Privacy-Zero_Tracking-10b981?style=flat-square&logo=ghostery&logoColor=white)](#-privacy-charter)
 [![Security Hardened](https://img.shields.io/badge/Security-SSRF_Defended-3b82f6?style=flat-square&logo=auth0&logoColor=white)](#-security-architecture)
-[![Accessibility](https://img.shields.io/badge/Accessibility-WCAG_2.1_AA-8b5cf6?style=flat-square&logo=w3c&logoColor=white)](#-accessibility--ui-standards)
-[![License](https://img.shields.io/badge/License-Proprietary-64748b?style=flat-square)](#-license)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
 
 <p align="center">
   <b>Audit any public website instantly without accounts, cookies, or intrusive telemetry.</b><br />
@@ -200,10 +199,14 @@ We welcome responsible security research. If you discover a vulnerability or sec
 - Do not execute destructive attacks, denial of service, or extract data belonging to other systems.
 - Valid submissions are promptly triaged and resolved.
 
+## 📄 License
+This project is open-source software licensed under the [MIT License](LICENSE).
+
 ---
 
 <div align="center">
   <sub>Designed & Developed with precision. Built for privacy, speed, and uncompromising technical clarity.</sub>
   <br>
-  <sub>© XeooAuditor. All rights reserved.</sub>
+  <sub>© 2026 XeooAuditor. Distributed under the MIT License.</sub>
 </div>
+

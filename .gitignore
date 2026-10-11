@@ -44,12 +44,16 @@ AGENTS.md
 agent.md
 CLAUDE.md
 
-# Scratch Scripts & Internal Diagnostics
+# Test Suites, Diagnostic Scripts & Scratch (Excluded from Public Repo)
+tests/
+**/tests/
+backend/tests/
+frontend/tests/
+*.test.*
+*.spec.*
+backend/test_*.php
+test_*.php
 scratch/
-tests/security_tests.php
-backend/tests/clear_rate_limit.php
-backend/tests/test_script_validation.php
-backend/test_db.php
 
 # Runtime Logs, Caches & Temporary Storage
 *.log
