@@ -15,8 +15,20 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
 
 <p align="center">
+  <a href="https://xeooauditor.xo.je" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/🚀_LIVE_PREVIEW-xeooauditor.xo.je-2563eb?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Preview XeooAuditor" />
+  </a>
+</p>
+
+<p align="center">
   <b>Audit any public website instantly without accounts, cookies, or intrusive telemetry.</b><br />
   A next-generation diagnostic suite delivering deep security, performance, SEO, and privacy insights.
+</p>
+
+<p align="center">
+  <a href="https://xeooauditor.xo.je" target="_blank" rel="noopener noreferrer">
+    <img src="screenshot/xeoo_auditor.png" alt="XeooAuditor Interface Preview" width="900" style="max-width: 100%; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.35);" />
+  </a>
 </p>
 
 ---

@@ -262,14 +262,14 @@ export const LandingPage: React.FC = () => {
         {/* Foreground Content */}
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black font-sans text-slate-950 tracking-tight leading-[1.12]">
-            Understand Your Website. <br />
-            <span className="text-sky-600">Improve Every Detail.</span>
+            Know What's Exposed
+            <br />
+            <span className="text-sky-600">Fix What Matters</span>
           </h1>
 
           <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed font-normal">
-            Inspect essential website health signals, discover configuration
-            flaws, and understand exactly what needs attention — without
-            accounts or tracking.
+            Check your website for security issues, exposed information, and
+            configuration mistakes. Get clear findings and know where to start.
           </p>
 
           {/* Working Hero Audit Form */}

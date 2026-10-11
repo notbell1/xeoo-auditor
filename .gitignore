@@ -11,6 +11,10 @@ vendor/
 .next/
 out/
 
+# Private Backend Core Engine (Self-Hosted / Excluded from Public Repository)
+backend/
+**/backend/
+
 # Environment Variables, Secrets & Credentials
 .env
 .env.*
