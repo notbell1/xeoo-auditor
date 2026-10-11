@@ -1,224 +1,272 @@
-<div align="center">
-
-# 🌐 XeooAuditor
-### **Privacy-First Public Website Auditing Toolkit**
-
-[![React](https://img.shields.io/badge/React-19.2-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
-[![Vite](https://img.shields.io/badge/Vite-8.x-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev)
-[![PHP](https://img.shields.io/badge/PHP-8.4-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net)
-[![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com)
-
-[![Privacy First](https://img.shields.io/badge/Privacy-Zero_Tracking-10b981?style=flat-square&logo=ghostery&logoColor=white)](#-privacy-charter)
-[![Security Hardened](https://img.shields.io/badge/Security-SSRF_Defended-3b82f6?style=flat-square&logo=auth0&logoColor=white)](#-security-architecture)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
+# 🔍 XeooAuditor
 
 <p align="center">
-  <a href="https://xeooauditor.xo.je" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/🚀_LIVE_PREVIEW-xeooauditor.xo.je-2563eb?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Preview XeooAuditor" />
+  <img src="screenshot/xeoo_auditor.png" alt="XeooAuditor — Main Website Screenshot" width="100%" />
+</p>
+
+<p align="center">
+  <a href="https://xeooauditor.xo.je/">
+    <img src="https://img.shields.io/badge/🌐_Explore-XeooAuditor-2563eb?style=for-the-badge" alt="Explore XeooAuditor" />
+  </a>
+  <a href="https://github.com/notbell1/xeoo-auditor">
+    <img src="https://img.shields.io/badge/Source-Open%20Source-181717?style=for-the-badge&logo=github" alt="Source Code" />
+  </a>
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-16a34a?style=for-the-badge" alt="MIT License" />
   </a>
 </p>
 
 <p align="center">
-  <b>Audit any public website instantly without accounts, cookies, or intrusive telemetry.</b><br />
-  A next-generation diagnostic suite delivering deep security, performance, SEO, and privacy insights.
+  <strong>One Audit. Complete Technical Visibility.</strong>
+  <br />
+  A modern, privacy-first website auditing toolkit for developers, security engineers, and site owners.
 </p>
 
 <p align="center">
-  <a href="https://xeooauditor.xo.je" target="_blank" rel="noopener noreferrer">
-    <img src="screenshot/xeoo_auditor.png" alt="XeooAuditor Interface Preview" width="900" style="max-width: 100%; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.35);" />
-  </a>
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=18&pause=1000&color=2563EB&center=true&vCenter=true&width=600&lines=Audit+Smarter.;Analyze+Faster.;Protect+Privacy.;Welcome+to+XeooAuditor." alt="Animated XeooAuditor tagline" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-v4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white" alt="PHP" />
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL" />
 </p>
 
 ---
 
-</div>
+## 🔍 Discover XeooAuditor
 
-## 🌟 Executive Overview
+**XeooAuditor** is an open-source, privacy-first public website auditing toolkit designed to give developers, site owners, and security practitioners fast, actionable technical diagnostics.
 
-**XeooAuditor** is a specialized, privacy-centric website auditing platform engineered to deliver thorough, verifiable diagnostic assessments for public web applications. 
+Visitors can submit any public website URL, evaluate security headers, TLS configuration, performance metrics, SEO signals, and privacy posture, and export standardized reports — completely without accounts, tracking cookies, or intrusive telemetry.
 
-Unlike traditional auditing tools that demand mandatory account creation, plant tracking beacons, or store visitor history indefinitely, XeooAuditor is constructed from the ground up on the principle of **Zero-PII Ephemerality**. Visitors submit a target URL, observe instantaneous multi-vector verification across five technical audit pillars, and download their audit findings immediately.
+<p align="center">
+  <a href="https://xeooauditor.xo.je/">
+    <strong>🚀 Launch XeooAuditor →</strong>
+  </a>
+</p>
 
-```
-┌────────────────────────────────────────────────────────────────────────┐
-│                        XEOO AUDITOR PIPELINE                           │
-│                                                                        │
-│   Public URL       SSRF & Network       Multi-Pillar      Ephemeral    │
-│  [ Input URL ] ──> [ Boundary Guard ] ─> [ Evaluators ] ─> [ Report ]  │
-│                           │                    │               │       │
-│                     Blocks RFC1918      5 Core Domains     Purged on   │
-│                     & Cloud Metadata    Analyzed Cleanly    Schedule   │
-└────────────────────────────────────────────────────────────────────────┘
-```
+### ⚡ Built Around What You Need
+
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <h3>⚡</h3>
+      <strong>Fast & Comprehensive</strong>
+      <br />
+      <sub>Instant multi-vector audits covering security, SEO, and performance.</sub>
+    </td>
+    <td align="center" width="33%">
+      <h3>🎨</h3>
+      <strong>Clean & Responsive</strong>
+      <br />
+      <sub>A consistent experience across desktop, tablet, and mobile displays.</sub>
+    </td>
+    <td align="center" width="33%">
+      <h3>🔒</h3>
+      <strong>Privacy First</strong>
+      <br />
+      <sub>Zero user tracking, no accounts needed, and ephemeral data handling.</sub>
+    </td>
+  </tr>
+</table>
 
 ---
 
-## ⚡ Core Technical Pillars
+## 🧭 Explore the Categories
 
-```mermaid
-flowchart TD
-    Target["Target URL Submission"] --> SG["Request Guard & SSRF Firewall"]
-    SG --> Engine["Diagnostic Audit Engine"]
-    
-    subgraph "5-Pillar Evaluation Matrix"
-        Engine --> P1["1. Security & Cryptographic Posture"]
-        Engine --> P2["2. Network & Performance Metrics"]
-        Engine --> P3["3. Technical SEO & Discoverability"]
-        Engine --> P4["4. Privacy & Ambient Cookie Analysis"]
-        Engine --> P5["5. Accessibility & Responsive Health"]
-    end
-    
-    P1 --> Report["Standardized Comprehensive Scorecard"]
-    P2 --> Report
-    P3 --> Report
-    P4 --> Report
-    P5 --> Report
-    Report --> Ephemeral["Strict TTL Automatic Purge"]
-```
+<sub>👇 Select an audit module to explore its diagnostic checks.</sub>
 
-<details open>
-<summary><b>1. Security Posture & Cryptographic Hardening</b></summary>
-<br>
+<details>
+<summary><strong>🔒 Security & Cryptographic Posture</strong></summary>
 
-- **Modern TLS/SSL Verification**: Inspects cipher suite strength, validity lifespan, and certificate authority legitimacy without bypassing verification flags.
-- **HTTP Response Security Headers**: Validates presence and strictness of `Content-Security-Policy`, `Strict-Transport-Security` (HSTS), `X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`, and `Permissions-Policy`.
-- **Clickjacking & MIME-Sniffing Defenses**: Detects framing vulnerabilities and dangerous content-type overrides.
+Comprehensive diagnostics for TLS certificates, encryption standards, and HTTP response security headers.
+
+- TLS / SSL Certificate Validation & Expiration
+- Strict-Transport-Security (HSTS)
+- Content-Security-Policy (CSP) Inspection
+- X-Frame-Options (Clickjacking Defense)
+- X-Content-Type-Options (MIME-Sniffing Protection)
+- Referrer-Policy Configuration
+- Permissions-Policy Verification
+
 </details>
 
 <details>
-<summary><b>2. Network Diagnostics & Performance Sizing</b></summary>
-<br>
+<summary><strong>⚡ Performance & Network Metrics</strong></summary>
 
-- **Protocol Negotiation**: Assesses HTTP/2 and HTTP/3 support for multiplexed asset streaming.
-- **Payload & Response Budgets**: Monitors raw payload transfer sizes, gzip/brotli compression utilization, and response latency.
-- **Cache Strategy Validation**: Examines `Cache-Control`, `ETag`, and conditional caching indicators.
+Assess server response speed, protocol negotiation, and asset compression.
+
+- Server Response Latency & Time to First Byte (TTFB)
+- Compression Analysis (Gzip / Brotli)
+- HTTP Protocol Support (HTTP/2, HTTP/1.1)
+- Response Payload Sizing & Transfer Budgets
+- Cache-Control & Conditional Caching Headers
+
 </details>
 
 <details>
-<summary><b>3. Technical SEO & Crawl Architecture</b></summary>
-<br>
+<summary><strong>🔍 Technical SEO & Discoverability</strong></summary>
 
-- **Robots Directives & Ingestion Rules**: Parses `robots.txt` syntax, crawl-delay directives, and disallow boundaries.
-- **Sitemap XML Validation**: Tests discoverability of XML sitemap declarations.
-- **Meta & Structured Graph Integrity**: Audits canonical URL consistency, OpenGraph tags, and semantic metadata hierarchy.
+Examine crawlability, indexing guidelines, and structured metadata.
+
+- Title Tag & Meta Description Health
+- Canonical URL Verification
+- Robots.txt Validation & Crawl Rules
+- XML Sitemap Availability (`sitemap.xml`)
+- Open Graph (OG) & Twitter Card Metadata
+- Viewport & Mobile-Friendliness Directives
+
 </details>
 
 <details>
-<summary><b>4. Privacy & Third-Party Footprint</b></summary>
-<br>
+<summary><strong>🛡️ Privacy & Cookie Compliance</strong></summary>
 
-- **Tracker & Beacon Exposure**: Flags intrusive third-party analytics and tracking pixels.
-- **Ambient Cookie Classification**: Identifies cross-site trackers, missing `Secure` or `HttpOnly` cookie flags, and lax `SameSite` configurations.
-- **Zero-Storage Philosophy**: Guarantees user-submitted audit targets are not indexed, harvested, or traded.
+Evaluate ambient data collection, third-party beacons, and cookie safety flags.
+
+- Ambient Cookie Analysis
+- Cookie Security Flags (`Secure`, `HttpOnly`, `SameSite`)
+- Third-Party Tracker & Telemetry Beacon Detection
+- Privacy Policy Page Discovery
+- Zero-PII Processing Compliance
+
 </details>
 
 <details>
-<summary><b>5. Accessibility & UX Foundations</b></summary>
-<br>
+<summary><strong>📊 Quality & Broken Resource Diagnostics</strong></summary>
 
-- **Viewport & Dynamic Scaling**: Verifies responsive mobile layouts, touch target adequacy, and meta-viewport boundaries.
-- **Semantic Structure**: Audits heading cascades (`h1`-`h6`), landmark tags, and alternative text indicators.
-- **High-Contrast Design**: Built in alignment with WCAG 2.1 AA visual contrast standards.
+Verify links, media assets, and resource consistency across the target website.
+
+- Internal & External Link Health Checker
+- Mixed Content Detection (Insecure HTTP on HTTPS)
+- Canonical Consistency
+- Resource Load Integrity
+
+</details>
+
+<details>
+<summary><strong>📑 Standardized Scoring & Report Export</strong></summary>
+
+Structured scorecard and flexible reporting formats for technical and executive review.
+
+- Normalized 0–100 Health Score
+- Categorized Statuses (`PASS`, `WARNING`, `FAIL`, `NOT_CHECKED`)
+- Actionable Remediation Guidance
+- Instant JSON Report Export
+- Print-Ready Styled PDF Report Generation
+
+</details>
+
+<details>
+<summary><strong>⚙️ Admin Management & Operational Health</strong></summary>
+
+A dedicated administrator dashboard for monitoring service performance and aggregated metrics.
+
+- Aggregated Traffic & Audit Statistics (No individual user surveillance)
+- System Service Health & Memory Diagnostics
+- Sanitized Operational Error Grouping & Correlation
+- Security Event Rate-Limiter Logs
+- Contact Message Management
+
 </details>
 
 ---
 
-## 🛠️ Technology Stack
+## 🎬 The Experience
 
-XeooAuditor combines a high-performance, strictly-typed reactive frontend with an enterprise-grade, memory-efficient PHP REST backend.
+<p align="center">
+  <img src="https://media.giphy.com/media/L1R1tvI9svkIWwpVYr/giphy.gif" width="75%" alt="Animated technical workflow illustration" />
+</p>
 
-### **Frontend Interface**
-- **Framework & Runtime**: React 19 (Strict Mode, Concurrency-Optimized)
-- **Language**: TypeScript 5+ (Strict Type Checking, Zero `any`)
-- **Build Tool**: Vite 8 (Sub-second HMR, Tree-Shaken Production Chunks)
-- **Styling Architecture**: Tailwind CSS v4 + Semantic Design Tokens CSS (`--color-surface`, `--color-brand`, etc.)
-- **Iconography**: Lucide React (Clean, geometric technical icons)
-- **Notifications**: SweetAlert2 (Dark-themed, accessible feedback dialogs)
+<p align="center">
+  <em>Zero surveillance. Uncompromising depth. Instant results.</em>
+</p>
 
-### **Backend Diagnostic Engine**
-- **Core Runtime**: PHP 8.4 REST Architecture
-- **Database Abstraction**: Native PDO with 100% Parameterized Statements & Strict Types (`declare(strict_types=1)`)
-- **Authentication & Sessions**: Single-Active-Session Policy, Argon2id Password Cryptography, Cryptographic Bearer/Cookie Session Guard
-- **Rate Limiting**: Sliding-Window IP/User Rate Limiter with Persistent Defense Tracking
-- **Security Guardrails**: `RequestGuard` (SSRF Defense, DNS Rebinding Prevention, Same-Origin Enforcement)
+XeooAuditor brings modern website diagnostics into a unified, clean interface:
 
-### **Data & Persistence Layer**
-- **RDBMS**: MySQL 8.0 / MariaDB
-- **Data Protection**: Zero-PII retention policies, aggregate-only operational error monitoring, automatic audit data eviction
+- **Full-viewport responsive design** for seamless use on desktop, tablet, and mobile.
+- **Consistent design system** engineered with shared design tokens and custom CSS variables.
+- **Light and dark theme support** with automatic system preference detection.
+- **SSRF firewall and boundary guard** preventing unauthorized network scans and internal IP probing.
+- **Ephemeral data lifecycle** ensuring reports and operational logs are automatically purged.
 
 ---
 
-## 🛡️ Security Architecture & SSRF Defenses
+## 🧰 Powered By
 
-XeooAuditor executes requests to user-submitted URLs on behalf of the client. To ensure the audit engine cannot be leveraged as an attack vector, strict network isolation is enforced:
+<p align="center">
+  <a href="https://react.dev/">
+    <img src="https://skillicons.dev/icons?i=react" alt="React" width="48" />
+  </a>
+  &nbsp;
+  <a href="https://www.typescriptlang.org/">
+    <img src="https://skillicons.dev/icons?i=ts" alt="TypeScript" width="48" />
+  </a>
+  &nbsp;
+  <a href="https://vite.dev/">
+    <img src="https://skillicons.dev/icons?i=vite" alt="Vite" width="48" />
+  </a>
+  &nbsp;
+  <a href="https://tailwindcss.com/">
+    <img src="https://skillicons.dev/icons?i=tailwind" alt="Tailwind CSS" width="48" />
+  </a>
+  &nbsp;
+  <a href="https://www.php.net/">
+    <img src="https://skillicons.dev/icons?i=php" alt="PHP" width="48" />
+  </a>
+  &nbsp;
+  <a href="https://www.mysql.com/">
+    <img src="https://skillicons.dev/icons?i=mysql" alt="MySQL" width="48" />
+  </a>
+</p>
 
-```
-                  ┌─────────────────────────────────────┐
-                  │    Target URL Validation Matrix     │
-                  └──────────────────┬──────────────────┘
-                                     │
-                   ┌─────────────────┴─────────────────┐
-                   ▼                                   ▼
-         [ Scheme Validator ]               [ DNS Resolution Guard ]
-       Only `http` & `https` allowed       Resolve host to IP before connect
-                   │                                   │
-                   ▼                                   ▼
-       [ Prohibited Destination ]          [ Private Range Filter ]
-       Reject localhost, 127.0.0.1         Block RFC 1918 (10.0.0.0/8,
-       Reject cloud metadata endpoints     172.16.0.0/12, 192.168.0.0/16,
-       (e.g., 169.254.169.254)             100.64.0.0/10, Carrier NAT)
-                   │                                   │
-                   └─────────────────┬─────────────────┘
-                                     │
-                                     ▼
-                   [ Hardened Connection Handshake ]
-                   Strict TLS verification & timeouts
-```
-
-- **Fail-Closed Design**: If hostname resolution yields an unverified or mixed IP address, the request is terminated immediately.
-- **Redirection Hop Caps**: Strict cap on HTTP redirection hops prevents infinite loops or redirect-based SSRF evasion.
-- **Resource Constraints**: Strict limits on max download bytes (2MB default) and request timeout (8s default) preserve system availability.
-
----
-
-## 🔒 Privacy Charter
-
-1. **No Visitor Accounts Required**: Public users never create accounts, provide emails, or authenticate to execute audit scans.
-2. **Zero Target Harvesting**: XeooAuditor does not maintain a searchable public repository of scanned URLs or expose individual reports to third parties.
-3. **No Credential Interception**: Scans never store cookies, authorization headers, or sensitive session variables from target websites.
-4. **Aggregate Operational Health**: The administrative telemetry layer records aggregate system health, service metrics, and sanitized error fingerprints only.
-5. **Scheduled Ephemeral Purging**: Temporary audit cache rows and operational session records are systematically purged according to strict retention schedules.
+<p align="center">
+  React 19 · TypeScript · Vite · Tailwind CSS v4 · PHP 8.x · MySQL / MariaDB · PDO · Lucide React
+</p>
 
 ---
 
-## 🎨 UI/UX System & Accessibility
+## 🔐 Security & Privacy
 
-XeooAuditor's user interface is built adhering to the **ui-ux-pro-max** design specification:
+XeooAuditor is built around strict security defenses and privacy-first principles:
 
-- **Strict Color Tokens**: Built on a single source of truth in `design-tokens.css`, guaranteeing visual coherence across dark and high-contrast modes.
-- **Keyboard Operable**: Full keyboard focus visibility (`:focus-visible`), skip links, and ARIA compliant dialogs.
-- **Reduced Motion Support**: Automatically respects `prefers-reduced-motion: reduce` OS preferences.
-- **Restrained Iconography**: Clean, minimalist geometric iconography. Strict ban on decorative, magical, or generic cybersecurity symbols.
+- **SSRF Protection:** Built-in network defense rejects `localhost`, private/link-local IPv4/IPv6 addresses (RFC1918), cloud metadata endpoints (e.g. AWS `169.254.169.254`), and unsafe URI schemes.
+- **Zero-PII Storage:** No user registration, no visitor IP tracking, and no cookies planted on public visitors.
+- **Bounded Diagnostic Testing:** Checks are passive and bounded — designed for assessing submitted public URLs, not intrusive penetration testing.
+- **Sanitized Telemetry:** Operational logs and error monitoring strip sensitive URLs, headers, and query strings before aggregation.
 
 ---
 
-## 🤝 Responsible Security Disclosure
+## 🤝 Contribute & Improve
 
-We welcome responsible security research. If you discover a vulnerability or security flaw:
-- Please report it through our secure **Contact Portal** selecting the **Security Disclosure** category.
-- Do not execute destructive attacks, denial of service, or extract data belonging to other systems.
-- Valid submissions are promptly triaged and resolved.
+Have an idea for a new audit check? Found an issue? Want to enhance the user experience?
+
+Contributions and feedback are always welcome:
+
+1. Check existing issues or submit a feature proposal.
+2. Keep audit modules focused, safe, and privacy-respecting.
+3. Adhere to the established design system tokens and component architecture.
+4. Run testing and linting checks prior to opening a pull request.
+
+---
 
 ## 📄 License
-This project is open-source software licensed under the [MIT License](LICENSE).
+
+XeooAuditor is open-source software licensed under the **MIT License**.
+
+See [`LICENSE`](LICENSE) for the complete license text.
 
 ---
 
-<div align="center">
-  <sub>Designed & Developed with precision. Built for privacy, speed, and uncompromising technical clarity.</sub>
-  <br>
-  <sub>© 2026 XeooAuditor. Distributed under the MIT License.</sub>
-</div>
-
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&pause=1200&color=2563EB&center=true&vCenter=true&width=550&lines=Thanks+for+visiting+XeooAuditor!;Audit+cleanly.+Build+securely." alt="Animated closing message" />
+  <br /><br />
+  <a href="https://xeooauditor.xo.je/">
+    <img src="https://img.shields.io/badge/EXPLORE_XEOOAUDITOR-2563eb?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Explore XeooAuditor" />
+  </a>
+  <br /><br />
+  <sub>Built with precision for developers, engineers, and privacy advocates.</sub>
+</p>
