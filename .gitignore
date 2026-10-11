@@ -10,6 +10,8 @@ build/
 vendor/
 .next/
 out/
+*.zip
+deploy_staging/
 
 # Private Backend Core Engine (Self-Hosted / Excluded from Public Repository)
 backend/
