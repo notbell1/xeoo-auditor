@@ -1,0 +1,23 @@
+# XeooAuditor
+
+> XeooAuditor is a privacy-first public website auditing toolkit. It enables visitors to submit public URLs, run security and technical compliance checks, and export reports without creating accounts or storing personal credentials.
+
+## Public Pages
+- Website Homepage: https://xeooauditor.xo.je/
+- Contact & Responsible Disclosure: https://xeooauditor.xo.je/contact
+
+## Core Auditing Capabilities
+- SSL / TLS Certificate and Protocol Inspection
+- HTTP Security Response Headers (HSTS, CSP, X-Frame-Options, Permissions-Policy)
+- DNS and Server Resolution Security
+- Robots.txt and Sitemap.xml Structure Validation
+
+## Privacy & Security Model
+- No visitor registration or account creation required.
+- Zero cookie-based visitor profiling or third-party tracking scripts.
+- Target URL scans are strictly bounded and protected against Server-Side Request Forgery (SSRF) via pre-flight DNS validation and cURL IP pinning.
+- Administrator functions are segregated with single-active session controls and rate-limited authentication.
+
+## Contact & Vulnerability Reporting
+For inquiries, reproducible bug reports, or responsible security disclosures, visit https://xeooauditor.xo.je/contact.
+

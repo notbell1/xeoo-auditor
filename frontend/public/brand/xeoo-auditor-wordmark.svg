@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 64" width="100%" height="100%" fill="none" role="img" aria-labelledby="wordmarkTitle wordmarkDesc">
+  <title id="wordmarkTitle">XeooAuditor Wordmark</title>
+  <desc id="wordmarkDesc">XeooAuditor brand icon and logotype for technical website auditing</desc>
+  <defs>
+    <linearGradient id="wmBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070A0F"/>
+      <stop offset="100%" stop-color="#030407"/>
+    </linearGradient>
+
+    <linearGradient id="wmBlueAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="60%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+
+    <linearGradient id="wmScanBeam" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#3B82F6" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#60A5FA" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Embedded Icon on Left (48x48, translated to 8, 8) -->
+  <g transform="translate(8, 8)">
+    <rect width="48" height="48" rx="11" fill="url(#wmBgGrad)"/>
+    <rect width="46" height="46" x="1" y="1" rx="10" stroke="#1E293B" stroke-width="1"/>
+
+    <!-- Corner Brackets -->
+    <path d="M8 13 V8 H13" stroke="#3B82F6" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.7"/>
+    <path d="M40 13 V8 H35" stroke="#3B82F6" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.7"/>
+    <path d="M8 35 V40 H13" stroke="#3B82F6" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.7"/>
+    <path d="M40 35 V40 H35" stroke="#3B82F6" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.7"/>
+
+    <!-- Center Geometric X -->
+    <path d="M14 14 L34 34" stroke="#FFFFFF" stroke-width="5.5" stroke-linecap="round"/>
+    <path d="M14 34 L21 27" stroke="url(#wmBlueAccent)" stroke-width="5.5" stroke-linecap="round"/>
+    <path d="M27 21 L34 14" stroke="url(#wmBlueAccent)" stroke-width="5.5" stroke-linecap="round"/>
+    <circle cx="24" cy="24" r="2" fill="#60A5FA"/>
+  </g>
+
+  <!-- Brand Typography -->
+  <!-- "Xeoo" in crisp white -->
+  <text x="68" y="36" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="22" font-weight="800" fill="#FFFFFF" letter-spacing="-0.02em">Xeoo</text>
+  
+  <!-- "Auditor" in electric blue -->
+  <text x="130" y="36" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="22" font-weight="600" fill="#3B82F6" letter-spacing="-0.01em">Auditor</text>
+
+  <!-- Tagline / Subtitle -->
+  <text x="69" y="49" font-family="'SFMono-Regular', Consolas, Menlo, monospace" font-size="7.5" font-weight="600" fill="#94A3B8" letter-spacing="0.14em">PRIVACY-FIRST WEBSITE AUDITING</text>
+</svg>
+

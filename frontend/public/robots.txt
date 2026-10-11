@@ -1,0 +1,12 @@
+# Robots.txt for XeooAuditor
+# Canonical Base: https://xeooauditor.xo.je
+
+User-agent: *
+Allow: /
+Allow: /contact
+Disallow: /login/mimin
+Disallow: /mimin/
+Disallow: /backend/
+
+Sitemap: https://xeooauditor.xo.je/sitemap.xml
+

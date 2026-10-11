@@ -1,0 +1,5 @@
+Contact: https://xeooauditor.xo.je/contact
+Preferred-Languages: id, en
+Canonical: https://xeooauditor.xo.je/.well-known/security.txt
+Policy: https://xeooauditor.xo.je/contact
+

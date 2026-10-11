@@ -1,0 +1,12 @@
+/* TEAM */
+Project: XeooAuditor
+Website: https://xeooauditor.xo.je
+Contact: https://xeooauditor.xo.je/contact
+
+/* TECHNOLOGY */
+Frontend: React 19, TypeScript, Vite 8, Tailwind CSS, Lucide Icons
+Backend: PHP 8.x REST API (PDO, Prepared Statements)
+Database: MySQL / MariaDB
+Security: SSRF Defense, cURL IP Pinning, Same-Origin Policy, Cryptographic Session Tokens
+Privacy: No Tracking, No Analytics Cookies, Zero Visitor Profiling
+

@@ -1,0 +1,704 @@
+/* =========================================================
+   XeooAuditor — Design Tokens
+   Single source of truth for the visual design system.
+   Direction: Technical Data-Dense Dashboard (ui-ux-pro-max)
+   Architecture: Primitive -> Semantic -> Component
+   ========================================================= */
+
+:root {
+  color-scheme: light;
+
+  /* -------------------------------------------------------
+     1. PRIMITIVE TOKENS (Raw values)
+     ------------------------------------------------------- */
+
+  /* Blue / Technical Primary (Trust, audit precision, authority) */
+  --blue-50: #eff6ff;
+  --blue-100: #dbeafe;
+  --blue-200: #bfdbfe;
+  --blue-300: #93c5fd;
+  --blue-400: #60a5fa;
+  --blue-500: #3b82f6;
+  --blue-600: #2563eb;
+  --blue-700: #1d4ed8;
+  --blue-800: #1e40af;
+  --blue-900: #1e3a8a;
+  --blue-950: #172554;
+
+  /* Slate / Neutrals (Technical interface surfaces & borders) */
+  --slate-25: #fcfdfd;
+  --slate-50: #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
+  --slate-950: #020617;
+
+  /* Emerald / Pass Status */
+  --emerald-50: #f0fdf4;
+  --emerald-100: #dcfce7;
+  --emerald-200: #bbf7d0;
+  --emerald-600: #16a34a;
+  --emerald-700: #15803d;
+  --emerald-800: #166534;
+  --emerald-900: #14532d;
+  --emerald-950: #052e16;
+
+  /* Ruby / Fail Status */
+  --ruby-50: #fef2f2;
+  --ruby-100: #fee2e2;
+  --ruby-200: #fecaca;
+  --ruby-600: #dc2626;
+  --ruby-700: #b91c1c;
+  --ruby-800: #991b1b;
+  --ruby-900: #7f1d1d;
+  --ruby-950: #450a0a;
+
+  /* Amber / Warning Status */
+  --amber-50: #fffbeb;
+  --amber-100: #fef3c7;
+  --amber-200: #fde68a;
+  --amber-500: #f59e0b;
+  --amber-600: #d97706;
+  --amber-700: #b45309;
+  --amber-800: #92400e;
+  --amber-900: #78350f;
+  --amber-950: #422006;
+
+  /* Indigo / Manual Required Status */
+  --indigo-50: #eef2ff;
+  --indigo-100: #e0e7ff;
+  --indigo-200: #c7d2fe;
+  --indigo-600: #4f46e5;
+  --indigo-700: #4338ca;
+  --indigo-800: #3730a3;
+  --indigo-950: #1e1b4b;
+
+  /* Cyan / Technical Metrics & Info */
+  --cyan-50: #ecfeff;
+  --cyan-100: #cffafe;
+  --cyan-200: #a5f3fc;
+  --cyan-600: #0891b2;
+  --cyan-700: #0e7490;
+  --cyan-950: #083344;
+
+  /* Typography primitives */
+  --font-sans: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  --font-mono: "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  --text-2xs: 0.6875rem; /* 11px */
+  --text-xs: 0.75rem;    /* 12px */
+  --text-sm: 0.875rem;   /* 14px */
+  --text-base: 1rem;     /* 16px */
+  --text-lg: 1.125rem;   /* 18px */
+  --text-xl: 1.25rem;    /* 20px */
+  --text-2xl: 1.5rem;    /* 24px */
+  --text-3xl: 1.875rem;  /* 30px */
+
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+
+  /* Spacing Scale (4px base) */
+  --space-0-5: 0.125rem; /* 2px */
+  --space-1: 0.25rem;    /* 4px */
+  --space-1-5: 0.375rem; /* 6px */
+  --space-2: 0.5rem;     /* 8px */
+  --space-2-5: 0.625rem; /* 10px */
+  --space-3: 0.75rem;    /* 12px */
+  --space-4: 1rem;       /* 16px */
+  --space-5: 1.25rem;    /* 20px */
+  --space-6: 1.5rem;     /* 24px */
+  --space-8: 2rem;       /* 32px */
+  --space-10: 2.5rem;    /* 40px */
+  --space-12: 3rem;      /* 48px */
+  --space-16: 4rem;      /* 64px */
+
+  /* Technical Radius (crisp, restrained) */
+  --radius-xs: 0.125rem; /* 2px */
+  --radius-sm: 0.25rem;  /* 4px */
+  --radius-md: 0.375rem; /* 6px */
+  --radius-lg: 0.5rem;   /* 8px */
+  --radius-xl: 0.75rem;  /* 12px */
+  --radius-full: 9999px;
+
+  /* Shadows (Subtle, architectural elevation) */
+  --shadow-none: none;
+  --shadow-xs: 0 1px 2px 0 rgb(15 23 42 / 0.04);
+  --shadow-sm: 0 1px 3px 0 rgb(15 23 42 / 0.08), 0 1px 2px -1px rgb(15 23 42 / 0.06);
+  --shadow-md: 0 4px 6px -1px rgb(15 23 42 / 0.07), 0 2px 4px -2px rgb(15 23 42 / 0.05);
+  --shadow-lg: 0 10px 15px -3px rgb(15 23 42 / 0.08), 0 4px 6px -4px rgb(15 23 42 / 0.04);
+
+  /* Transitions & Motion */
+  --duration-instant: 75ms;
+  --duration-fast: 150ms;
+  --duration-normal: 200ms;
+  --duration-slow: 300ms;
+  --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+
+  /* Layout */
+  --container-max: 1360px;
+  --sidebar-width: 240px;
+  --header-height: 56px;
+  --table-row-height: 38px;
+  --table-row-compact: 32px;
+
+  /* Layering (z-index) */
+  --z-base: 0;
+  --z-elevated: 10;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-overlay: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+  --z-tooltip: 600;
+
+  /* -------------------------------------------------------
+     2. SEMANTIC TOKENS (Light Mode Default)
+     ------------------------------------------------------- */
+
+  /* Brand / Action */
+  --color-brand-primary: var(--blue-800);
+  --color-brand-primary-hover: var(--blue-900);
+  --color-brand-secondary: var(--blue-600);
+  --color-brand-subtle: var(--blue-50);
+  --color-brand-border: var(--blue-200);
+
+  /* Surfaces */
+  --color-background: var(--slate-50);
+  --color-surface: #ffffff;
+  --color-surface-secondary: var(--slate-100);
+  --color-surface-tertiary: var(--slate-200);
+  --color-surface-hover: var(--slate-100);
+  --color-surface-active: var(--slate-200);
+
+  /* Borders */
+  --color-border-subtle: var(--slate-100);
+  --color-border: var(--slate-200);
+  --color-border-strong: var(--slate-300);
+  --color-border-interactive: var(--blue-500);
+
+  /* Text & Foreground */
+  --color-text-primary: var(--slate-900);
+  --color-text-secondary: var(--slate-700);
+  --color-text-muted: var(--slate-500);
+  --color-text-disabled: var(--slate-400);
+  --color-text-inverse: #ffffff;
+  --color-text-link: var(--blue-700);
+  --color-text-link-hover: var(--blue-900);
+
+  /* Focus Indicator (WCAG AA Compliant) */
+  --color-focus: var(--blue-600);
+  --color-focus-ring: rgb(37 99 235 / 0.25);
+
+  /* Audit Status Tokens (Mandatory per AGENTS.md & website-auditing) */
+  /* PASS: Checked and compliant */
+  --color-status-pass: var(--emerald-700);
+  --color-status-pass-bg: var(--emerald-50);
+  --color-status-pass-border: var(--emerald-200);
+  --color-status-pass-text: var(--emerald-800);
+
+  /* FAIL: Checked and non-compliant */
+  --color-status-fail: var(--ruby-700);
+  --color-status-fail-bg: var(--ruby-50);
+  --color-status-fail-border: var(--ruby-200);
+  --color-status-fail-text: var(--ruby-800);
+
+  /* WARNING: Suboptimal or advisory finding */
+  --color-status-warning: var(--amber-700);
+  --color-status-warning-bg: var(--amber-50);
+  --color-status-warning-border: var(--amber-200);
+  --color-status-warning-text: var(--amber-900);
+
+  /* NOT_CHECKED: Skipped, rate-limited, or out of scope */
+  --color-status-not-checked: var(--slate-600);
+  --color-status-not-checked-bg: var(--slate-100);
+  --color-status-not-checked-border: var(--slate-300);
+  --color-status-not-checked-text: var(--slate-700);
+
+  /* MANUAL_REQUIRED: Requires human verification or external access */
+  --color-status-manual: var(--indigo-700);
+  --color-status-manual-bg: var(--indigo-50);
+  --color-status-manual-border: var(--indigo-200);
+  --color-status-manual-text: var(--indigo-800);
+
+  /* Backward Compatibility Aliases */
+  --color-brand-50: var(--blue-50);
+  --color-brand-100: var(--blue-100);
+  --color-brand-200: var(--blue-200);
+  --color-brand-300: var(--blue-300);
+  --color-brand-400: var(--blue-400);
+  --color-brand-500: var(--blue-500);
+  --color-brand-600: var(--blue-600);
+  --color-brand-700: var(--blue-700);
+  --color-brand-800: var(--blue-800);
+  --color-brand-900: var(--blue-900);
+
+  --color-success: var(--color-status-pass);
+  --color-success-bg: var(--color-status-pass-bg);
+  --color-warning: var(--color-status-warning);
+  --color-warning-bg: var(--color-status-warning-bg);
+  --color-danger: var(--color-status-fail);
+  --color-danger-bg: var(--color-status-fail-bg);
+  --color-info: var(--cyan-700);
+  --color-info-bg: var(--cyan-50);
+
+  --color-text: var(--color-text-primary);
+}
+
+/* -------------------------------------------------------
+   2B. SEMANTIC TOKENS (Dark Mode)
+   ------------------------------------------------------- */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* Brand / Action */
+  --color-brand-primary: var(--blue-500);
+  --color-brand-primary-hover: var(--blue-400);
+  --color-brand-secondary: var(--blue-400);
+  --color-brand-subtle: rgb(30 58 138 / 0.35);
+  --color-brand-border: var(--blue-800);
+
+  /* Surfaces */
+  --color-background: var(--slate-950);
+  --color-surface: var(--slate-900);
+  --color-surface-secondary: var(--slate-800);
+  --color-surface-tertiary: var(--slate-700);
+  --color-surface-hover: var(--slate-800);
+  --color-surface-active: var(--slate-700);
+
+  /* Borders */
+  --color-border-subtle: var(--slate-800);
+  --color-border: var(--slate-700);
+  --color-border-strong: var(--slate-600);
+  --color-border-interactive: var(--blue-400);
+
+  /* Text & Foreground */
+  --color-text-primary: var(--slate-50);
+  --color-text-secondary: var(--slate-200);
+  --color-text-muted: var(--slate-400);
+  --color-text-disabled: var(--slate-500);
+  --color-text-inverse: var(--slate-950);
+  --color-text-link: var(--blue-400);
+  --color-text-link-hover: var(--blue-300);
+
+  /* Focus Indicator */
+  --color-focus: var(--blue-400);
+  --color-focus-ring: rgb(96 165 250 / 0.35);
+
+  /* Audit Status Tokens (Dark Mode) */
+  --color-status-pass: #4ade80;
+  --color-status-pass-bg: var(--emerald-950);
+  --color-status-pass-border: var(--emerald-800);
+  --color-status-pass-text: var(--emerald-200);
+
+  --color-status-fail: #f87171;
+  --color-status-fail-bg: var(--ruby-950);
+  --color-status-fail-border: var(--ruby-800);
+  --color-status-fail-text: var(--ruby-200);
+
+  --color-status-warning: #fbbf24;
+  --color-status-warning-bg: var(--amber-950);
+  --color-status-warning-border: var(--amber-800);
+  --color-status-warning-text: var(--amber-200);
+
+  --color-status-not-checked: var(--slate-400);
+  --color-status-not-checked-bg: var(--slate-800);
+  --color-status-not-checked-border: var(--slate-700);
+  --color-status-not-checked-text: var(--slate-200);
+
+  --color-status-manual: #a5b4fc;
+  --color-status-manual-bg: var(--indigo-950);
+  --color-status-manual-border: var(--indigo-800);
+  --color-status-manual-text: var(--indigo-200);
+
+  /* Backward Compatibility Aliases (Dark Mode) */
+  --color-success: var(--color-status-pass);
+  --color-success-bg: var(--color-status-pass-bg);
+  --color-warning: var(--color-status-warning);
+  --color-warning-bg: var(--color-status-warning-bg);
+  --color-danger: var(--color-status-fail);
+  --color-danger-bg: var(--color-status-fail-bg);
+  --color-info: #38bdf8;
+  --color-info-bg: var(--cyan-950);
+
+  --color-text: var(--color-text-primary);
+
+  --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.2);
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.3);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.35);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.4);
+}
+
+/* -------------------------------------------------------
+   3. TAILWIND CSS v4 THEME INTEGRATION
+   Exposes tokens directly to Tailwind utility engine
+   ------------------------------------------------------- */
+@theme {
+  --color-brand-primary: var(--color-brand-primary);
+  --color-brand-primary-hover: var(--color-brand-primary-hover);
+  --color-brand-secondary: var(--color-brand-secondary);
+  --color-brand-subtle: var(--color-brand-subtle);
+  --color-brand-border: var(--color-brand-border);
+
+  --color-surface: var(--color-surface);
+  --color-surface-secondary: var(--color-surface-secondary);
+  --color-surface-tertiary: var(--color-surface-tertiary);
+  --color-surface-hover: var(--color-surface-hover);
+  --color-surface-active: var(--color-surface-active);
+
+  --color-border-subtle: var(--color-border-subtle);
+  --color-border-default: var(--color-border);
+  --color-border-strong: var(--color-border-strong);
+  --color-border-interactive: var(--color-border-interactive);
+
+  --color-text-primary: var(--color-text-primary);
+  --color-text-secondary: var(--color-text-secondary);
+  --color-text-muted: var(--color-text-muted);
+  --color-text-disabled: var(--color-text-disabled);
+
+  --color-status-pass: var(--color-status-pass);
+  --color-status-pass-bg: var(--color-status-pass-bg);
+  --color-status-pass-border: var(--color-status-pass-border);
+  --color-status-pass-text: var(--color-status-pass-text);
+
+  --color-status-fail: var(--color-status-fail);
+  --color-status-fail-bg: var(--color-status-fail-bg);
+  --color-status-fail-border: var(--color-status-fail-border);
+  --color-status-fail-text: var(--color-status-fail-text);
+
+  --color-status-warning: var(--color-status-warning);
+  --color-status-warning-bg: var(--color-status-warning-bg);
+  --color-status-warning-border: var(--color-status-warning-border);
+  --color-status-warning-text: var(--color-status-warning-text);
+
+  --color-status-not-checked: var(--color-status-not-checked);
+  --color-status-not-checked-bg: var(--color-status-not-checked-bg);
+  --color-status-not-checked-border: var(--color-status-not-checked-border);
+  --color-status-not-checked-text: var(--color-status-not-checked-text);
+
+  --color-status-manual: var(--color-status-manual);
+  --color-status-manual-bg: var(--color-status-manual-bg);
+  --color-status-manual-border: var(--color-status-manual-border);
+  --color-status-manual-text: var(--color-status-manual-text);
+
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  --spacing-4\.5: 1.125rem;
+  --spacing-5\.5: 1.375rem;
+}
+
+/* -------------------------------------------------------
+   4. BASE ELEMENTS & GLOBAL RESETS
+   ------------------------------------------------------- */
+html {
+  font-family: var(--font-sans);
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+}
+
+body {
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+  line-height: var(--line-height-normal);
+}
+
+::selection {
+  color: #ffffff;
+  background-color: var(--color-brand-secondary);
+}
+
+/* -------------------------------------------------------
+   5. COMPONENT PRIMITIVES (.xa-*)
+   ------------------------------------------------------- */
+
+/* Cards & Panels */
+.xa-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-xs);
+  transition: border-color var(--duration-fast) var(--ease-standard);
+}
+
+.xa-card-interactive:hover {
+  border-color: var(--color-border-strong);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Buttons */
+.xa-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 36px;
+  padding: var(--space-1-5) var(--space-3);
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  line-height: var(--line-height-tight);
+  cursor: pointer;
+  white-space: nowrap;
+  user-select: none;
+  transition:
+    background-color var(--duration-fast) var(--ease-standard),
+    border-color var(--duration-fast) var(--ease-standard),
+    color var(--duration-fast) var(--ease-standard),
+    box-shadow var(--duration-fast) var(--ease-standard);
+}
+
+.xa-btn:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.xa-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.xa-btn-primary {
+  color: var(--color-text-inverse);
+  background-color: var(--color-brand-primary);
+  border-color: var(--color-brand-primary);
+}
+
+.xa-btn-primary:hover:not(:disabled) {
+  background-color: var(--color-brand-primary-hover);
+  border-color: var(--color-brand-primary-hover);
+}
+
+.xa-btn-secondary {
+  color: var(--color-text-primary);
+  background-color: var(--color-surface);
+  border-color: var(--color-border-strong);
+}
+
+.xa-btn-secondary:hover:not(:disabled) {
+  background-color: var(--color-surface-hover);
+  border-color: var(--color-border-strong);
+}
+
+.xa-btn-ghost {
+  color: var(--color-text-secondary);
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.xa-btn-ghost:hover:not(:disabled) {
+  color: var(--color-text-primary);
+  background-color: var(--color-surface-hover);
+}
+
+.xa-btn-compact {
+  min-height: 28px;
+  padding: var(--space-1) var(--space-2);
+  font-size: var(--text-xs);
+}
+
+/* Inputs & Form Controls */
+.xa-input {
+  width: 100%;
+  min-height: 36px;
+  padding: var(--space-1-5) var(--space-2-5);
+  color: var(--color-text-primary);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  line-height: var(--line-height-normal);
+  transition:
+    border-color var(--duration-fast) var(--ease-standard),
+    box-shadow var(--duration-fast) var(--ease-standard);
+}
+
+.xa-input::placeholder {
+  color: var(--color-text-disabled);
+}
+
+.xa-input:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 1px;
+  border-color: var(--color-focus);
+}
+
+.xa-input:disabled {
+  background-color: var(--color-surface-secondary);
+  color: var(--color-text-disabled);
+  cursor: not-allowed;
+}
+
+/* Status Badges */
+.xa-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 1px var(--space-2);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: var(--font-semibold);
+  letter-spacing: 0.01em;
+  border: 1px solid transparent;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.xa-badge-pass,
+.xa-badge-success {
+  color: var(--color-status-pass-text);
+  background-color: var(--color-status-pass-bg);
+  border-color: var(--color-status-pass-border);
+}
+
+.xa-badge-fail,
+.xa-badge-danger {
+  color: var(--color-status-fail-text);
+  background-color: var(--color-status-fail-bg);
+  border-color: var(--color-status-fail-border);
+}
+
+.xa-badge-warning {
+  color: var(--color-status-warning-text);
+  background-color: var(--color-status-warning-bg);
+  border-color: var(--color-status-warning-border);
+}
+
+.xa-badge-not-checked {
+  color: var(--color-status-not-checked-text);
+  background-color: var(--color-status-not-checked-bg);
+  border-color: var(--color-status-not-checked-border);
+}
+
+.xa-badge-manual {
+  color: var(--color-status-manual-text);
+  background-color: var(--color-status-manual-bg);
+  border-color: var(--color-status-manual-border);
+}
+
+.xa-badge-info {
+  color: var(--color-info);
+  background-color: var(--color-info-bg);
+  border-color: var(--cyan-200);
+}
+
+/* Status Dot Indicator (Pair with text label for WCAG AA compliance) */
+.xa-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.xa-status-dot-pass {
+  background-color: var(--color-status-pass);
+}
+
+.xa-status-dot-fail {
+  background-color: var(--color-status-fail);
+}
+
+.xa-status-dot-warning {
+  background-color: var(--color-status-warning);
+}
+
+.xa-status-dot-not-checked {
+  background-color: var(--color-status-not-checked);
+}
+
+.xa-status-dot-manual {
+  background-color: var(--color-status-manual);
+}
+
+/* Technical Monospace & Code Display */
+.xa-code {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  padding: 0.125rem 0.375rem;
+  background-color: var(--color-surface-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xs);
+  color: var(--color-text-primary);
+  word-break: break-all;
+}
+
+/* Dense Data Table */
+.xa-table-container {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+}
+
+.xa-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-xs);
+  text-align: left;
+}
+
+.xa-table th {
+  padding: var(--space-2) var(--space-3);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-secondary);
+  background-color: var(--color-surface-secondary);
+  border-bottom: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+
+.xa-table td {
+  padding: var(--space-2) var(--space-3);
+  color: var(--color-text-primary);
+  border-bottom: 1px solid var(--color-border-subtle);
+  height: var(--table-row-height);
+  vertical-align: middle;
+}
+
+.xa-table tr:hover td {
+  background-color: var(--color-surface-hover);
+}
+
+.xa-table tr:last-child td {
+  border-bottom: 0;
+}
+
+/* Dividers */
+.xa-divider {
+  height: 1px;
+  border: 0;
+  background-color: var(--color-border);
+  margin: var(--space-4) 0;
+}
+
+/* -------------------------------------------------------
+   6. ACCESSIBILITY OVERRIDES
+   ------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

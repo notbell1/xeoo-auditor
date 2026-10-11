@@ -1,22 +1,67 @@
+# ==============================================================================
+# XeooAuditor — Git Ignore Configuration
+# Privacy-first, zero-leak policy for public repository distribution
+# ==============================================================================
+
+# Dependencies & Compiled Artifacts
 node_modules/
+dist/
+build/
+vendor/
 .next/
 out/
-dist/
-.env*
+
+# Environment Variables, Secrets & Credentials
+.env
+.env.*
 !.env.example
-.data/
-*.db
-*.db-shm
-*.db-wal
+config.local.php
+**/config.local.php
+*.pem
+*.key
+*.cert
+*.crt
+secrets/
+credentials/
+
+# Database Files, Dumps & Schema Migrations
+database.sql
+*.sql
 *.sqlite
-*.sqlite-shm
-*.sqlite-wal
-*.tsbuildinfo
+*.sqlite3
+*.db
+*.sql.gz
+*.dump
+migrations/*.sql
+backend/migrations/
+
+# Agent Workflows, Skills & Private Prompt Directives
+.agents/
+.agents/**
+.codex/
+.cursor/
+AGENTS.md
+agent.md
+CLAUDE.md
+
+# Scratch Scripts & Internal Diagnostics
+scratch/
+tests/security_tests.php
+backend/tests/clear_rate_limit.php
+backend/tests/test_script_validation.php
+backend/test_db.php
+
+# Runtime Logs, Caches & Temporary Storage
+*.log
+logs/
+tmp/
+cache/
+.phpunit.cache/
 playwright-report/
 test-results/
-coverage/
+
+# OS & IDE System Files
 .DS_Store
-*.log
-.vercel/
-.claude/settings.local.json
-.codex/config.local.toml
+Thumbs.db
+.vscode/
+.idea/

@@ -1,120 +1,209 @@
-# Base Postgres — ngodingpakeai starters
+<div align="center">
 
-The PostgreSQL edition of the base starter: **Next.js, Drizzle ORM, PostgreSQL, Better Auth, Tailwind CSS, shadcn/ui, and Motion**. It includes working accounts, a blank protected app, an authenticated Notes API demonstrating the backend standard, project skills, and Context7 configuration.
+# 🌐 XeooAuditor
+### **Privacy-First Public Website Auditing Toolkit**
 
-This is an independent starter. Use it as the foundation for your dashboard, chatbot, or another app.
+[![React](https://img.shields.io/badge/React-19.2-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
+[![Vite](https://img.shields.io/badge/Vite-8.x-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev)
+[![PHP](https://img.shields.io/badge/PHP-8.4-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net)
+[![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com)
 
-## Start here
+[![Privacy First](https://img.shields.io/badge/Privacy-Zero_Tracking-10b981?style=flat-square&logo=ghostery&logoColor=white)](#-privacy-charter)
+[![Security Hardened](https://img.shields.io/badge/Security-SSRF_Defended-3b82f6?style=flat-square&logo=auth0&logoColor=white)](#-security-architecture)
+[![Accessibility](https://img.shields.io/badge/Accessibility-WCAG_2.1_AA-8b5cf6?style=flat-square&logo=w3c&logoColor=white)](#-accessibility--ui-standards)
+[![License](https://img.shields.io/badge/License-Proprietary-64748b?style=flat-square)](#-license)
 
-Install **Node.js 22.12 or newer** and **Docker Desktop**, then start Docker Desktop. Open this project folder in your AI editor and prompt:
+<p align="center">
+  <b>Audit any public website instantly without accounts, cookies, or intrusive telemetry.</b><br />
+  A next-generation diagnostic suite delivering deep security, performance, SEO, and privacy insights.
+</p>
 
-> Build a personal reading list with accounts. Set up this project, run it, and let each person manage their own books.
+---
 
-The agent instructions make local setup part of the first app-building prompt, then continue your feature. No separate database setup prompt is needed. See [the first-run workflow](docs/local-development.md).
+</div>
 
-Or run inside this folder:
+## 🌟 Executive Overview
 
-```sh
-npm run setup
-npm run dev
+**XeooAuditor** is a specialized, privacy-centric website auditing platform engineered to deliver thorough, verifiable diagnostic assessments for public web applications. 
+
+Unlike traditional auditing tools that demand mandatory account creation, plant tracking beacons, or store visitor history indefinitely, XeooAuditor is constructed from the ground up on the principle of **Zero-PII Ephemerality**. Visitors submit a target URL, observe instantaneous multi-vector verification across five technical audit pillars, and download their audit findings immediately.
+
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│                        XEOO AUDITOR PIPELINE                           │
+│                                                                        │
+│   Public URL       SSRF & Network       Multi-Pillar      Ephemeral    │
+│  [ Input URL ] ──> [ Boundary Guard ] ─> [ Evaluators ] ─> [ Report ]  │
+│                           │                    │               │       │
+│                     Blocks RFC1918      5 Core Domains     Purged on   │
+│                     & Cloud Metadata    Analyzed Cleanly    Schedule   │
+└────────────────────────────────────────────────────────────────────────┘
 ```
 
-Open [localhost:3000](http://localhost:3000) and create your own account.
+---
 
-Setup installs pinned dependencies, generates a private auth secret and database password, starts PostgreSQL 17 through `compose.dev.yaml` in Docker, waits for it to be healthy, applies migrations, and checks the connection. Values live in ignored `.env.local`; repeated setup preserves existing values and database records.
+## ⚡ Core Technical Pillars
 
-The database is published only on loopback. Fresh setup selects an available high port and records it in `.env.local`. Its data lives in a named Docker volume. Each fresh copy gets a unique Compose project name and its own credentials. To stop it while keeping data, run `npm run db:down`; `npm run db:up` starts it again. Different local copies need different `POSTGRES_PORT` values if running simultaneously.
-
-## Already have PostgreSQL?
-
-Set a connection string in `.env.local` **before** running setup:
-
-```dotenv
-DATABASE_URL=postgresql://user:password@host:5432/database
+```mermaid
+flowchart TD
+    Target["Target URL Submission"] --> SG["Request Guard & SSRF Firewall"]
+    SG --> Engine["Diagnostic Audit Engine"]
+    
+    subgraph "5-Pillar Evaluation Matrix"
+        Engine --> P1["1. Security & Cryptographic Posture"]
+        Engine --> P2["2. Network & Performance Metrics"]
+        Engine --> P3["3. Technical SEO & Discoverability"]
+        Engine --> P4["4. Privacy & Ambient Cookie Analysis"]
+        Engine --> P5["5. Accessibility & Responsive Health"]
+    end
+    
+    P1 --> Report["Standardized Comprehensive Scorecard"]
+    P2 --> Report
+    P3 --> Report
+    P4 --> Report
+    P5 --> Report
+    Report --> Ephemeral["Strict TTL Automatic Purge"]
 ```
 
-Then run the same setup and dev commands. A supplied connection bypasses Docker and migrations target that database. Use a database dedicated to this app. Follow your provider's TLS requirements; never disable certificate checks to make a connection work.
+<details open>
+<summary><b>1. Security Posture & Cryptographic Hardening</b></summary>
+<br>
 
-If your provider supplies separate pooled and direct connections, use the pooled URL for `DATABASE_URL` and the direct URL for `MIGRATION_DATABASE_URL`. Migration commands prefer the latter. Do not commit either URL.
+- **Modern TLS/SSL Verification**: Inspects cipher suite strength, validity lifespan, and certificate authority legitimacy without bypassing verification flags.
+- **HTTP Response Security Headers**: Validates presence and strictness of `Content-Security-Policy`, `Strict-Transport-Security` (HSTS), `X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`, and `Permissions-Policy`.
+- **Clickjacking & MIME-Sniffing Defenses**: Detects framing vulnerabilities and dangerous content-type overrides.
+</details>
 
-## Build with a prompt
+<details>
+<summary><b>2. Network Diagnostics & Performance Sizing</b></summary>
+<br>
 
-Enable Context7 once in your editor; see [AI editor setup](docs/ai-workflow.md). Then try:
+- **Protocol Negotiation**: Assesses HTTP/2 and HTTP/3 support for multiplexed asset streaming.
+- **Payload & Response Budgets**: Monitors raw payload transfer sizes, gzip/brotli compression utilization, and response latency.
+- **Cache Strategy Validation**: Examines `Cache-Control`, `ETag`, and conditional caching indicators.
+</details>
 
-> Read AGENTS.md and use build-feature. Create a personal reading list. Let me add books, mark them finished, and delete them. Each account should only see its own books. Use Drizzle with PostgreSQL and Context7 for current documentation. Build the smallest working version and test it.
+<details>
+<summary><b>3. Technical SEO & Crawl Architecture</b></summary>
+<br>
 
-No model API key is required by the app. The AI integration supports your coding workflow; runtime chatbot features belong in a derivative.
+- **Robots Directives & Ingestion Rules**: Parses `robots.txt` syntax, crawl-delay directives, and disallow boundaries.
+- **Sitemap XML Validation**: Tests discoverability of XML sitemap declarations.
+- **Meta & Structured Graph Integrity**: Audits canonical URL consistency, OpenGraph tags, and semantic metadata hierarchy.
+</details>
 
-## What is included
+<details>
+<summary><b>4. Privacy & Third-Party Footprint</b></summary>
+<br>
 
-| Area           | Included                                                                     |
-| -------------- | ---------------------------------------------------------------------------- |
-| App            | Next.js App Router, React, strict TypeScript                                 |
-| Data           | Drizzle ORM, node-postgres connection pool, PostgreSQL migrations            |
-| Local database | PostgreSQL 17 in Docker, persistent volume, random credentials, healthcheck  |
-| Accounts       | Better Auth signup/signin/signout, real server-side sessions                 |
-| Roles          | Better Auth access control, permission-guarded API routes and admin page     |
-| UI             | Tailwind v4, shadcn/ui primitives, Lucide icons, Motion with reduced motion  |
-| AI workflow    | AGENTS.md + agent.md, four project skills, Context7 configs for four editors |
-| Quality        | Lint, types, formatting, real PostgreSQL tests, browser auth tests, CI       |
-| Derivatives    | Safe source copier retaining PostgreSQL tooling and base version metadata    |
+- **Tracker & Beacon Exposure**: Flags intrusive third-party analytics and tracking pixels.
+- **Ambient Cookie Classification**: Identifies cross-site trackers, missing `Secure` or `HttpOnly` cookie flags, and lax `SameSite` configurations.
+- **Zero-Storage Philosophy**: Guarantees user-submitted audit targets are not indexed, harvested, or traded.
+</details>
 
-## Backend example
+<details>
+<summary><b>5. Accessibility & UX Foundations</b></summary>
+<br>
 
-The [Notes API](docs/backend.md) demonstrates the standard: **API routes → Better Auth session checks and validation → services → Drizzle/PostgreSQL**. It supports real CRUD with per-account ownership. Database queries live in `src/services/`; each Drizzle table lives in its own file under `src/db/schema/`. The feature-building skill follows this structure for future prompts.
+- **Viewport & Dynamic Scaling**: Verifies responsive mobile layouts, touch target adequacy, and meta-viewport boundaries.
+- **Semantic Structure**: Audits heading cascades (`h1`-`h6`), landmark tags, and alternative text indicators.
+- **High-Contrast Design**: Built in alignment with WCAG 2.1 AA visual contrast standards.
+</details>
 
-The same doc covers **role-based access**: `src/lib/permissions.ts` declares resources and roles, `/api/admin/notes` and `/admin` are guarded by permissions rather than a session alone, and `npm run role:set -- you@example.com admin` promotes an account. Signup can never set a role.
+---
 
-## Commands
+## 🛠️ Technology Stack
 
-| Command                       | What it does                                                             |
-| ----------------------------- | ------------------------------------------------------------------------ |
-| `npm run setup`               | Install, configure, start local PostgreSQL if needed, migrate, diagnose  |
-| `npm run dev`                 | Prepare the database and start the development app                       |
-| `npm run db:up`               | Start this copy's local PostgreSQL; skip for an external connection      |
-| `npm run db:status`           | Inspect this copy's database container                                   |
-| `npm run db:logs`             | Read the last 80 database log lines                                      |
-| `npm run test:setup`          | Verify a fresh setup, retries, and data persistence in a disposable copy |
-| `npm run db:down`             | Stop local containers while preserving the volume                        |
-| `npm run doctor`              | Check config, database connection, auth tables, and AI files             |
-| `npm run db:generate`         | Generate migration SQL after a schema edit                               |
-| `npm run db:migrate`          | Apply committed migrations                                               |
-| `npm run role:set`            | Grant a role: `npm run role:set -- you@example.com admin`                |
-| `npm run db:studio`           | Inspect the database with Drizzle Studio                                 |
-| `npm run check`               | Lint, typecheck, and tests against disposable PostgreSQL                 |
-| `npm run build` / `npm start` | Build and serve the production app                                       |
-| `npm test`                    | Run setup, copying, and real PostgreSQL migration tests                  |
-| `npm run test:e2e`            | Run browser tests against a separate PostgreSQL container                |
-| `npm run format`              | Format source and docs                                                   |
+XeooAuditor combines a high-performance, strictly-typed reactive frontend with an enterprise-grade, memory-efficient PHP REST backend.
 
-Tests require Docker even if your app uses a hosted database. They launch a unique disposable PostgreSQL server, inject its URL into the test processes, and remove it afterward. Your app database is never used. Browser tests use port **3101**; first run `npx playwright install chromium` and `npm run build`.
+### **Frontend Interface**
+- **Framework & Runtime**: React 19 (Strict Mode, Concurrency-Optimized)
+- **Language**: TypeScript 5+ (Strict Type Checking, Zero `any`)
+- **Build Tool**: Vite 8 (Sub-second HMR, Tree-Shaken Production Chunks)
+- **Styling Architecture**: Tailwind CSS v4 + Semantic Design Tokens CSS (`--color-surface`, `--color-brand`, etc.)
+- **Iconography**: Lucide React (Clean, geometric technical icons)
+- **Notifications**: SweetAlert2 (Dark-themed, accessible feedback dialogs)
 
-## Customize and extend
+### **Backend Diagnostic Engine**
+- **Core Runtime**: PHP 8.4 REST Architecture
+- **Database Abstraction**: Native PDO with 100% Parameterized Statements & Strict Types (`declare(strict_types=1)`)
+- **Authentication & Sessions**: Single-Active-Session Policy, Argon2id Password Cryptography, Cryptographic Bearer/Cookie Session Guard
+- **Rate Limiting**: Sliding-Window IP/User Rate Limiter with Persistent Defense Tracking
+- **Security Guardrails**: `RequestGuard` (SSRF Defense, DNS Rebinding Prevention, Same-Origin Enforcement)
 
-- Identity: `starter.config.json` and `src/config/site.ts`.
-- Your first feature: `src/app/(protected)/app/page.tsx`.
-- UI tokens: `src/app/globals.css`.
-- Tables: `src/db/schema/` (export tables from `index.ts`); use `pgTable`, PostgreSQL booleans, and timestamps.
-- Add UI primitives: `npx shadcn@4.21.0 add dialog`.
-- Create another PostgreSQL derivative: `npm run create:variant -- dashboard ../my-dashboard`.
+### **Data & Persistence Layer**
+- **RDBMS**: MySQL 8.0 / MariaDB
+- **Data Protection**: Zero-PII retention policies, aggregate-only operational error monitoring, automatic audit data eviction
 
-See [architecture](docs/architecture.md), [derivatives](docs/derivatives.md), [prompts](docs/prompts.md), and [changes from SQLite](docs/variant.md).
+---
 
-## Hosting
+## 🛡️ Security Architecture & SSRF Defenses
 
-Use a Node.js-compatible host and persistent PostgreSQL service. Set private `DATABASE_URL`, `BETTER_AUTH_SECRET`, and public `BETTER_AUTH_URL` settings. Apply migrations once per release, then build and start. The app itself does not need a persistent database file. For serverless or multiple instances, use an appropriate database pooler and connection limits. See [deployment](docs/deployment.md).
+XeooAuditor executes requests to user-submitted URLs on behalf of the client. To ensure the audit engine cannot be leveraged as an attack vector, strict network isolation is enforced:
 
-For container hosts, `Dockerfile` builds the app (`docker build -t my-app .`) and a release migration job (`docker build --target migrator -t my-app-migrate .`). It is for production only; local development still uses `npm run dev` with `compose.dev.yaml`.
+```
+                  ┌─────────────────────────────────────┐
+                  │    Target URL Validation Matrix     │
+                  └──────────────────┬──────────────────┘
+                                     │
+                   ┌─────────────────┴─────────────────┐
+                   ▼                                   ▼
+         [ Scheme Validator ]               [ DNS Resolution Guard ]
+       Only `http` & `https` allowed       Resolve host to IP before connect
+                   │                                   │
+                   ▼                                   ▼
+       [ Prohibited Destination ]          [ Private Range Filter ]
+       Reject localhost, 127.0.0.1         Block RFC 1918 (10.0.0.0/8,
+       Reject cloud metadata endpoints     172.16.0.0/12, 192.168.0.0/16,
+       (e.g., 169.254.169.254)             100.64.0.0/10, Carrier NAT)
+                   │                                   │
+                   └─────────────────┬─────────────────┘
+                                     │
+                                     ▼
+                   [ Hardened Connection Handshake ]
+                   Strict TLS verification & timeouts
+```
 
-Email verification, password recovery email, social login, billing, and AI provider calls are not configured. Add only the services your product needs.
+- **Fail-Closed Design**: If hostname resolution yields an unverified or mixed IP address, the request is terminated immediately.
+- **Redirection Hop Caps**: Strict cap on HTTP redirection hops prevents infinite loops or redirect-based SSRF evasion.
+- **Resource Constraints**: Strict limits on max download bytes (2MB default) and request timeout (8s default) preserve system availability.
 
-## Troubleshooting
+---
 
-- **Docker not found / cannot connect:** install and start Docker Desktop, then run setup again.
-- **Your saved database port is occupied:** before first setup, optionally set `POSTGRES_PORT=5434` in `.env.local`. For an existing local setup, update both `POSTGRES_PORT` and the port inside `DATABASE_URL`, then restart the database.
-- **Database password rejected:** verify your private settings. Changing `POSTGRES_PASSWORD` does not change a password inside an existing Docker volume. Restore the original value or deliberately rotate the database credential; do not delete the volume to fix it.
-- **App port changed:** set `BETTER_AUTH_URL=http://localhost:3001` in `.env.local`, then run `npm run dev -- --port 3001`.
-- **Missing auth tables:** run `npm run db:migrate`.
-- **Connection fails:** run `npm run doctor`. Check the URL, network rules, TLS, and credentials. Connection strings are kept out of diagnostic output.
+## 🔒 Privacy Charter
 
-MIT. See [LICENSE](LICENSE) and [third-party notices](THIRD_PARTY_NOTICES.md).
+1. **No Visitor Accounts Required**: Public users never create accounts, provide emails, or authenticate to execute audit scans.
+2. **Zero Target Harvesting**: XeooAuditor does not maintain a searchable public repository of scanned URLs or expose individual reports to third parties.
+3. **No Credential Interception**: Scans never store cookies, authorization headers, or sensitive session variables from target websites.
+4. **Aggregate Operational Health**: The administrative telemetry layer records aggregate system health, service metrics, and sanitized error fingerprints only.
+5. **Scheduled Ephemeral Purging**: Temporary audit cache rows and operational session records are systematically purged according to strict retention schedules.
+
+---
+
+## 🎨 UI/UX System & Accessibility
+
+XeooAuditor's user interface is built adhering to the **ui-ux-pro-max** design specification:
+
+- **Strict Color Tokens**: Built on a single source of truth in `design-tokens.css`, guaranteeing visual coherence across dark and high-contrast modes.
+- **Keyboard Operable**: Full keyboard focus visibility (`:focus-visible`), skip links, and ARIA compliant dialogs.
+- **Reduced Motion Support**: Automatically respects `prefers-reduced-motion: reduce` OS preferences.
+- **Restrained Iconography**: Clean, minimalist geometric iconography. Strict ban on decorative, magical, or generic cybersecurity symbols.
+
+---
+
+## 🤝 Responsible Security Disclosure
+
+We welcome responsible security research. If you discover a vulnerability or security flaw:
+- Please report it through our secure **Contact Portal** selecting the **Security Disclosure** category.
+- Do not execute destructive attacks, denial of service, or extract data belonging to other systems.
+- Valid submissions are promptly triaged and resolved.
+
+---
+
+<div align="center">
+  <sub>Designed & Developed with precision. Built for privacy, speed, and uncompromising technical clarity.</sub>
+  <br>
+  <sub>© XeooAuditor. All rights reserved.</sub>
+</div>

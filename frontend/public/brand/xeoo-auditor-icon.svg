@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%" fill="none" role="img" aria-labelledby="iconTitle iconDesc">
+  <title id="iconTitle">XeooAuditor Icon</title>
+  <desc id="iconDesc">Geometric technical X logo on a near-black background with electric blue precision audit accents</desc>
+  <defs>
+    <!-- Background subtle gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070A0F"/>
+      <stop offset="100%" stop-color="#030407"/>
+    </linearGradient>
+
+    <!-- Electric Blue Technical Accent Gradient -->
+    <linearGradient id="blueAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="60%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+
+    <!-- Subtle Scanner Glow -->
+    <linearGradient id="scanBeam" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#3B82F6" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#60A5FA" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Base Rounded Container -->
+  <rect width="128" height="128" rx="28" fill="url(#bgGrad)"/>
+  <rect width="126" height="126" x="1" y="1" rx="27" stroke="#1E293B" stroke-width="1.5" stroke-opacity="0.8"/>
+
+  <!-- Scanning / Precision Corner Brackets -->
+  <path d="M22 34 V22 H34" stroke="#3B82F6" stroke-width="2.5" stroke-linecap="round" stroke-opacity="0.6"/>
+  <path d="M106 34 V22 H94" stroke="#3B82F6" stroke-width="2.5" stroke-linecap="round" stroke-opacity="0.6"/>
+  <path d="M22 94 V106 H34" stroke="#3B82F6" stroke-width="2.5" stroke-linecap="round" stroke-opacity="0.6"/>
+  <path d="M106 94 V106 H94" stroke="#3B82F6" stroke-width="2.5" stroke-linecap="round" stroke-opacity="0.6"/>
+
+  <!-- Subtle Horizontal Scan Beam -->
+  <rect x="22" y="62" width="84" height="4" fill="url(#scanBeam)" rx="2"/>
+
+  <!-- Primary Geometric Diagonal Stroke (Top-Left to Bottom-Right) — Solid Crisp White -->
+  <path d="M38 38 L90 90" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round"/>
+
+  <!-- Secondary Geometric Stroke (Bottom-Left to Top-Right) — Electric Blue Audit Slice -->
+  <!-- Bottom-Left Leg: Deep Blue -->
+  <path d="M38 90 L56 72" stroke="url(#blueAccent)" stroke-width="14" stroke-linecap="round"/>
+
+  <!-- Top-Right Leg: Radiant Electric Blue with Precision Cap -->
+  <path d="M72 56 L90 38" stroke="url(#blueAccent)" stroke-width="14" stroke-linecap="round"/>
+
+  <!-- Central Verification Crosshairs & Node -->
+  <circle cx="64" cy="64" r="4.5" fill="#60A5FA"/>
+  <circle cx="64" cy="64" r="8.5" stroke="#93C5FD" stroke-width="1.5" stroke-opacity="0.75"/>
+</svg>
+

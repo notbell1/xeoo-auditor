@@ -1,0 +1,29 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Rewrite /api/* requests to backend/api/*
+  RewriteRule ^api/(.*)$ backend/api/$1 [L,QSA]
+
+  # Allow direct access to existing files and directories
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Allow direct access to backend directory (PHP API)
+  RewriteRule ^backend/ - [L]
+
+  # Route all other frontend requests to index.html for client-side routing
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# Prevent access to sensitive dotfiles, backups, and database dumps
+<FilesMatch "(?i)\.(env|sql|log|bak|config|git)">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order deny,allow
+    Deny from all
+  </IfModule>
+</FilesMatch>

@@ -1,1 +1,0 @@
-Read `AGENTS.md` at the repository root before working. It contains the stack boundaries, Context7 documentation workflow, project skill map, and validation commands. Open the relevant `.agents/skills/*/SKILL.md` file directly when skill discovery is unavailable. Reuse the existing auth, database, and UI.
